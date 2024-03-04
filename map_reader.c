@@ -6,7 +6,7 @@
 /*   By: mbrandao <mbrandao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:41:47 by mbrandao          #+#    #+#             */
-/*   Updated: 2024/02/25 17:07:44 by mbrandao         ###   ########.fr       */
+/*   Updated: 2024/03/04 14:06:54 by mbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,6 @@ char	**save_map(char *file)
 	}
 	free(temp);
 	map = ft_split(line, '\n');
-	free(line);
-	close(fd);
+	(free(line), close(fd));
 	return (map);
 }
